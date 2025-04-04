@@ -1,11 +1,11 @@
-// Импорт классов и интерфейса
+// Importing classes and interface
 import { Storage } from "./classes/Storage";
 import { NameStorage } from "./classes/NameStorage";
 
-// Тестирование с примитивными типами
+// Testing with primitive types
 const stringStorage = new Storage<string>();
-stringStorage.add("Привет");
-console.log(stringStorage.get()); // "Привет"
+stringStorage.add("Hello");
+console.log(stringStorage.get()); // "Hello"
 stringStorage.clear();
 console.log(stringStorage.get()); // null
 
@@ -13,10 +13,10 @@ const numberStorage = new Storage<number>();
 numberStorage.add(42);
 console.log(numberStorage.get()); // 42
 
-// Тестирование с пользовательским типом (объект с свойством 'name')
+// Testing with a custom type (object with a 'name' property)
 const personStorage = new NameStorage<{ name: string, age: number }>();
-personStorage.add({ name: "Алиса", age: 30 });
-console.log(personStorage.get()); // { name: "Алиса", age: 30 }
+personStorage.add({ name: "Alice", age: 30 });
+console.log(personStorage.get()); // { name: "Alice", age: 30 }
 
-// Выводим сообщение о прохождении тестов
-console.log("Тесты прошли успешно!");
+// Displaying message that tests passed
+console.log("Tests passed successfully!");
